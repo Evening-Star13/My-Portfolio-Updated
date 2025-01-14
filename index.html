@@ -4,8 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero .logo {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      background-color: #444444;
+      padding: 1rem;
+    }
+
+    .link-group {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .link a {
+      color: #fff;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .link a:hover {
+      background-color: #555;
+    }
+
+    .link.active a {
+      padding: 0.5rem 1rem;
+      color: #e90e0e;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 0.3rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    @media (max-width: 680px) {
+      .link-group {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .link-group.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hamburger.active {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -27,35 +107,40 @@
     </nav>
   </header>
   <main>
-    <h1>My Portfolio</h1>
+    <section class="hero">
+      <h1>My Portfolio</h1>
+      <img src="/Images/BarrTechLogoUpdate-removebg-preview.png" alt="BarrTech Logo" class="logo">
+    </section>
     <!-- About -->
-    <section>
-      <h2 id=aboutme">About Me</h2>
+    <section class="about-me">
+      <div class="about-me-content">
+        <h2 id="aboutme" class="h2_title">About Me</h2>
+      </div>
     </section>
 
     <!-- Services -->
     <section>
-      <h2 id="services">Services</h2>
+      <h2 id="services" class="h2_title">Services</h2>
     </section>
 
     <!-- Skills -->
     <section>
-      <h2 id="skills">Skills</h2>
+      <h2 id="skills" class="h2_title">Skills</h2>
     </section>
 
     <!-- Portfolio -->
     <section>
-      <h2 id="portfolio">Portfolio</h2>
+      <h2 id="portfolio" class="h2_title">Portfolio</h2>
     </section>
 
     <!-- Resume -->
     <section>
-      <h2 id="resume">Resume</h2>
+      <h2 id="resume" class="h2_title">Resume</h2>
     </section>
 
     <!-- Contact -->
     <section>
-      <h2 id="contact">Contact Me</h2>
+      <h2 id="contact" class="h2_title">Contact Me</h2>
     </section>
   </main>
   <footer>
